@@ -1,32 +1,117 @@
-.App {
+body {
+  background: #3104e5;
+}
+
+.main{
+    background: #3104e5;
+    height: 100vh;
+}
+
+.main__header{
+  color: #fff;
+  text-align: center;
+  font-size: 3em;
+}
+
+.main__content{
+  color: #fff;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.content__grid > table {
+  margin: auto;
+  width: 70%;
+  color: #ffb200;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#cats {
+  width:200px;
+  height:70px;
+  color: #fff;
+  font-size: 1.5em;
+  border: solid black;
 }
 
-.App-link {
-  color: #61dafb;
+#overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background: #3104e5; /*dim the background*/
+  font-size: 4em;
+  color: #fff;
+  border: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#play {
+    border: 2px solid #000;
+    width: 250px;
+    height: 100px;
+    border-radius: 4px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #3104e5;
+}
+
+.players{
+  display: inline-block;
+  /* background-color: #000; */
+  font-size: 2em;
+  padding: 20px;
+}
+
+.main__players{
+  /* background-color: #fff; */
+  width: 60%;
+  height: 200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.content__grid {
+  margin: auto;
+  width: 70%;
+  background-color: #000;
+}
+
+.content__grid > table {
+  height: 100%;
+  width: 100%;
+}
+
+.content__grid > thead,tr,th {
+  background-color: #3104e5;
+  width:200px;
+  height:70px;
+  border: solid black;
+}
+
+#value {
+    color: #ffb200;
+}
+
+.addScores button{
+  padding: 10px;
+  text-decoration: none;
+  font-size: 1em;
+  font-weight: bold;
+  color: #ffb200;
+}
+
+.addScores {
+  padding: 10px;
+}
+
+#grid button{
+    border: none;
+    width:100%;
+    height:100%;
+    background-color: #3104e5; /* #3104e5*/
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: bold;
+    color: #ffb200;
 }

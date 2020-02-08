@@ -1,25 +1,35 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Header from './Components/Header.js';
+import Quiz from './Components/Quiz.js';
+
 import './App.css';
 
 class App extends Component {
+  state = {
+    play: true
+  };
+
+  play = (e) => {
+     e.preventDefault();
+     this.setState({play:!this.state.play});
+   }
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div className="main">
+        {this.state.play ?
+        (
+          <div className="main__header">
+          <Header></Header>
+          <button id="play" onClick={this.play}>play</button>
+          </div>
+        ) :
+        (
+          <div className="main__content">
+            <h1>JEOPARDY!</h1>
+            <Quiz></Quiz>
+          </div>
+        )}
       </div>
     );
   }
