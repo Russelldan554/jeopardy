@@ -11,7 +11,7 @@ class App extends Component {
 
   play = (e) => {
      e.preventDefault();
-     this.setState({play:!this.state.play});
+     this.setState({play:!this.state.play}); 
    }
 
   render() {
